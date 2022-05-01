@@ -93,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                apiCurrency.updateCurrencies(spinner.getSelectedItem().toString());
+                if (spinner.getSelectedItem().toString().length() > 0) {
+                    apiCurrency.updateCurrencies(spinner.getSelectedItem().toString());
+                }
             }
 
             @Override
